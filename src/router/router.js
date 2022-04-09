@@ -14,7 +14,7 @@ const router = new VueRouter({
         },
         {
             name: 'Profile',
-            path: '/profile',
+            path: '/profile/:id',
             component: () => import('@/views/Profile.vue')
         }
 

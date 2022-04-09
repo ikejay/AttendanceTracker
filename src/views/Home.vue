@@ -55,6 +55,7 @@ export default {
             console.log(value)
             this.$router.push({
                 name: 'Profile',
+                params: value
             })
         }
     }

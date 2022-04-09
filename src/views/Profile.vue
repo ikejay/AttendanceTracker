@@ -1,6 +1,5 @@
 <template>
   <v-card
-    :loading="loading"
     class="mx-auto my-3"
     width="800px"
   >
@@ -14,8 +13,8 @@
 
     <v-img
         aspect-ratio="contain"
-      height="250"
-      :src="info.imgUrl"
+        height="250"
+        :src="info.imgUrl"
     ></v-img>
 
     <v-card-title style="text-align: 'center'">{{info.name}}</v-card-title>
@@ -41,20 +40,17 @@
     <v-card-title>Attendance Details</v-card-title>
 
     <v-card-text>
-        <v-row>
-             {{info.status ? "Present" : "Absent"}}
+        <v-row
+            align="center"
+            class="mx-0"
+            justify="space-between"
+        >
+            <div class="my-4 text-subtitle-1">
+                {{info.status ? "Present" : "Absent"}}
+            </div>
         </v-row>
     </v-card-text>
 
-    <v-card-actions>
-      <v-btn
-        color="deep-purple lighten-2"
-        text
-        @click="reserve"
-      >
-        Reserve
-      </v-btn>
-    </v-card-actions>
   </v-card>
 </template>
 
@@ -65,8 +61,6 @@ export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Profile',
     data: () => ({
-      loading: false,
-      selection: 1,
       info: {}
     }),
 

@@ -1,24 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+ <v-app>
+   <v-app-bar color="#581845 " app>
+     <h2 style="color: white">Attendance Tracker</h2>
+     <v-spacer></v-spacer>
+     <h3 style="color: white">{{new Date().toJSON().slice(0,10).replace(/-/g,'/')}}</h3>
+   </v-app-bar>
+    <router-view/>
+ </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Cairo, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

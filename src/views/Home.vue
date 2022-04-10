@@ -19,7 +19,16 @@
         >
         </v-simple-checkbox>
     </template>    
-  </v-data-table>
+        </v-data-table>
+    <v-card-text>
+        <v-row style="margin: 10px 10px 40px auto"  justify="center">
+            <v-btn @click="saveAttendance" color="primary">Save
+                <v-icon dark> 
+                    mdi-content-save-outline
+                </v-icon>
+            </v-btn>
+        </v-row>
+    </v-card-text>
     </v-card>
 </template>
 
@@ -57,6 +66,13 @@ export default {
                 name: 'Profile',
                 params: value
             })
+        },
+
+        saveAttendance(){
+            let now = new Date().toLocaleDateString()
+            let SchoolAttendance = new Map
+            SchoolAttendance.set(data, now)
+            console.log(SchoolAttendance)
         }
     }
 }

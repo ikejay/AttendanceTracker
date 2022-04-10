@@ -25,7 +25,7 @@
 
 <script>
 import data from '@/data/students'
-import store from '@/store/index'
+// import store from '@/store/index'
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
@@ -50,8 +50,8 @@ export default {
 
     methods: {
         handleProfileDetails(value){
-            console.log('==student==')
-            store.commit('addStudent',value)
+        //    store.commit('addStudents', data)
+
             console.log(value)
             this.$router.push({
                 name: 'Profile',

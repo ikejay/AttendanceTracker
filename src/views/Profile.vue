@@ -65,7 +65,10 @@ export default {
     }),
 
     mounted(){
-        this.info = store.getters.getStudent
+        console.log('----Getting---->')
+        console.log(this.$route.params.id)
+        let stArr = store.getters.getStudent(this.$route.params.id)
+        this.info = stArr[0]
     },
 
     methods: {

@@ -1,20 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import data from '@/data/students'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    student: {}
+    student: data
   },
   mutations: {
-    addStudent (state, payload) {
+    addStudents (state, payload) {
       state.student = payload
     }
   },
   getters: {
-    getStudent: state => {
-        return state.student
+    getStudent: (state) => (id) => {
+        return state.student.filter(a => a.id == id)
     }    
   }
 })

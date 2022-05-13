@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import MainLayout from '../layouts/MainLayout.vue'
+import AuthLayout from '../layouts/AuthLayout.vue'
 
 Vue.use(VueRouter)
 
@@ -7,17 +9,38 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            component: () => import('@/views/Home.vue'),
+            component: AuthLayout,
             children: [
-                
+                {
+                    name: 'login',
+                    path: '',
+                    component: () => import('@/views/Login.vue')
+                },
+                {
+                    name: 'signup',
+                    path: '/signup',
+                    component: () => import('@/views/Signup.vue')
+                }
             ]
         },
         {
-            name: 'Profile',
-            path: '/profile/:id',
-            component: () => import('@/views/Profile.vue')
+            path: '/home',
+            component: MainLayout,
+            children: [
+                {
+                    path: '/',
+                    component: () => import('@/views/Home.vue'),
+                    children: [
+                        
+                    ]
+                },
+                {
+                    name: 'Profile',
+                    path: '/profile/:id',
+                    component: () => import('@/views/Profile.vue')
+                }
+            ]
         }
-
     ]
 })
 

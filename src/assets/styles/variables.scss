@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap");
+
+
+$body-font-family: 'Cairo', serif;
+$heading-font-family: "Cairo", serif;
+$headings: (
+        'h1': (
+                'font-family': $heading-font-family,
+        ),
+        'h2': (
+                'font-family': $heading-font-family,
+        ),
+        'h3': (
+                'font-family': $heading-font-family,
+        ),
+        'h4': (
+                'font-family': $heading-font-family,
+        ),
+        'h5': (
+                'font-family': $heading-font-family,
+        ),
+        'h6': (
+                'font-family': $heading-font-family,
+        ),
+);

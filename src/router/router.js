@@ -24,12 +24,13 @@ const router = new VueRouter({
             ]
         },
         {
-            path: '/home',
+            path: '/school',
             component: MainLayout,
             children: [
                 {
+                    name: 'school',
                     path: '/',
-                    component: () => import('@/views/Home.vue'),
+                    component: () => import('@/views/admin/School.vue'),
                     children: [
                         
                     ]

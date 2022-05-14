@@ -1,15 +1,15 @@
-module.exports = {
-  publicPath: '/',
+const { defineConfig } = require('@vue/cli-service')
+
+module.exports = defineConfig({
+  // options...
   css: {
     loaderOptions: {
-      scss: {
-        prependData: `
-          @import "@/styles/variables.scss"
-          `
+      sass: {
+        data: `
+                    @import "@/assets/styles/variables.scss";
+                `
       }
     }
-  },
-  transpileDependencies: [
-    'vuetify'
-  ]
-}
+  }
+  
+})

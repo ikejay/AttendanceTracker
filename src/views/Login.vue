@@ -53,13 +53,31 @@
                         <div>
                             <v-form class="py-10 px-10">
                                 <v-text-field
-                                    placeholder="example@gmail.com"
-                                    label="Full Name"
+                                    placeholder="Kofi"
+                                    label="First Name"
                                     outlined
                                     dark
                                     color="white"
                                     prepend-inner-icon="mdi-account"                  
                                 ></v-text-field>
+                                <v-text-field
+                                    placeholder="Annan"
+                                    label="Last Name"
+                                    outlined
+                                    dark
+                                    color="white"
+                                    prepend-inner-icon="mdi-account"                  
+                                ></v-text-field>
+                                <v-select
+                                    placeholder="male"
+                                    label="Gender"
+                                    prepend-inner-icon="mdi-gender-male-female"
+                                    flat
+                                    dark
+                                    outlined
+                                    :items="['Male', 'Female']"
+                                    color="white"
+                                ></v-select>
                                 <v-text-field
                                     placeholder="example@gmail.com"
                                     label="E-mail"

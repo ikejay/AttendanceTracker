@@ -14,8 +14,11 @@ export default new Vuetify({
     theme: {
       themes: {
         light: {
-          primary: '#00BFA6',
-          secondary: '#19645A'
+          primary: '#4682B4',
+          secondary: '#172d44',
+          textfield: '#eaf1f8',
+          dash_shadow: '#246092',
+          card_back: '#D6EAF8'
         }
       }
     }

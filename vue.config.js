@@ -1,3 +1,5 @@
+
+
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
@@ -5,7 +7,7 @@ module.exports = defineConfig({
   css: {
     loaderOptions: {
       sass: {
-        data: `
+        additionalData: `
                     @import "@/assets/styles/variables.scss";
                 `
       }

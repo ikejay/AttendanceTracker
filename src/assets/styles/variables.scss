@@ -23,3 +23,7 @@ $headings: (
                 'font-family': $heading-font-family,
         ),
 );
+
+.btn {
+        text-transform: none !important;
+}
